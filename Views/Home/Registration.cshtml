@@ -1,0 +1,88 @@
+﻿@model VCM.Models.User
+
+@{
+    ViewBag.Title = "Registration";
+}
+<h2>@ViewBag.Title.</h2>
+<link href="~/Content/Style.css" rel="stylesheet" />
+<style>
+    .panel-body {
+        padding: 15px;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    input, select, textarea {
+        max-width: 650px;
+    }
+</style>
+<div class="panel-heading text-center">
+    <h1>Registration</h1>
+</div>
+<div class="panel-body">
+
+    @if (ViewBag.Status != null && Convert.ToBoolean(ViewBag.Status))
+    {
+        if (ViewBag.Message != null)
+        {
+            <div class="alert alert-success">
+                <strong>Success!</strong>@ViewBag.Message
+            </div>
+        }
+    }
+    else
+    {
+        using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                <label>First Name</label>
+                @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.FirstName)
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                @Html.TextBoxFor(x => x.LastName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.LastName)
+            </div>
+            <div class="form-group">
+                <label>Email (This will be your user name)</label>
+                @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+            <div class="form-group">
+                <label>Date of Birth</label>
+                @Html.TextBoxFor(x => x.DateOfBirth, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.DateOfBirth)
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                @Html.PasswordFor(x => x.ConfirmPassword, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.ConfirmPassword)
+            </div>
+            <div class="text-left">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+
+            /*if (ViewBag.Message != null)
+            {
+                <div class="alert alert-danger">
+                    <strong>Error!</strong>@ViewBag.Message
+                </div>
+            }*/
+        }
+    }
+
+</div>
+
+
+@section Scripts{
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+

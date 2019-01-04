@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Events";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="">
+<div class="panel-heading text-center">
+    <h1>Events</h1>
+
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <br />
+    <br />
+    <div class="container" >
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h2 align="center">Upcoming Events:</h2>
+                <br />
+                <div>
+                    
+                        <div class="text-left">
+                            <h3>Disturbed & Three Days Grace</h3>
+                        </div>
+                        <div class="thumbnail">
+                            <img src="~/Content/Images/2019-DISTURBED-EVENT-IMAGE.jpg" class="img-rounded" />
+                        </div>
+                    
+                    <strong>
+                        We have access to 6 box suite tickets for Disturbed's upcoming show at the Target Center.  Tickets are $90.00 each.  If you are interested in attending send us a message by going to the Contact Page.
+                    </strong>
+                </div>
+                
+            </div>
+            <div class="col-md-6">
+                <h2 align="center">Recent Events:</h2>
+                <br />
+                <div>
+                    
+                        <div class="text-left">
+                            <h3>Five Finger Death Punch & Breaking Benjamin</h3>
+                        </div>
+                        <div class="thumbnail">
+
+                            <img src="~/Content/Images/FFDP112018.jpg" class="img-rounded" />
+                        </div>
+                    
+                    <strong>
+                        On November 20, 2018 six members attended the FFDP & Breaking Benjamin show at the Target Center in Minneapolis.  It was great to get out for some good music and time with friends.
+                    </strong>
+                </div>
+                <div>
+                    
+                        <div class="text-left">
+                            <h3>Saturday with the Saint Paul Saints</h3>
+                        </div>
+                        <div class="thumbnail">
+                            <img src="~/Content/Images/CommunityEvents&Activities.jpg" class="img-rounded" />
+                        </div>
+                    
+                    <strong>
+                        Back in August of 2018 six members enjoyed a salute to service experience with the Saint Paul Saints at CHS Field.
+                    </strong>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts{
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+

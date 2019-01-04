@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<br />
+
+<div class="jumbotron">
+    <h1 align="center">Vet Cycle Minnesota</h1>
+    <p align="center"><img src="~/Content/Images/VCMHomePage.jpg" class="img-responsive" /></p>   
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Weekly Rides</h2>
+        <p>
+            We hold two group rides every week.  The group rides the Dakota Trail every Friday evening, and we alternate between the Gateway Trail, Cannon Valley Trail, and Minneapolis Chain of Lakes Trail every Saturday morning.
+        </p>
+        <p>@Html.ActionLink("Learn More....", "WeeklyRides", "Home", new { @class = "btn btn-default" } )</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Community Rides</h2>
+        <p>At the beginning of the season we put out a list of possible large community charity rides, and the group picks one ride for each month of the regular season.</p>
+        <p>@Html.ActionLink("Learn More....", "CommunityRides", "Home", new { @class = "btn btn-default" })</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Events</h2>
+        <p>In addition to bike rides, we also have opportunities to attend other events as a group to relax and have fun.  Some examples are group barbeques, volunteering in the community, or attending concerts and sporting events.  </p>
+        <p>@Html.ActionLink("Learn More....", "Events", "Home", new { @class = "btn btn-default" })</p>
+    </div>
+</div>

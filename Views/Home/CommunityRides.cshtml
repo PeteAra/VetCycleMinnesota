@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Community Rides";
+}
+<h2>@ViewBag.Title.</h2>
+<div class="panel-heading text-center">
+    <h1>Community Rides</h1>
+</div>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="">
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <br />
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <div>
+
+                    <div class="text-center">
+                        <h3>ST. JUDE RIDE</h3>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="~/Content/Images/stjuderide.jpg" class="img-rounded" style="width: 750px ; height: 400px;" />
+                    </div>
+
+                    <strong>
+                        For the past two years members of Vet Cycle Minnesota have participated in this amazing charity ride that benefits the ST. JUDE Hospital.  ST. JUDE offers outstanding medical care to all children in need, regardless of whether they can afford it.  Please join us Sunday, July 21, 2019!
+                    </strong>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div>
+
+                    <div class="text-center">
+                        <h3>ST PAUL CLASSIC</h3>
+                    </div>
+                    <div class="thumbnail">
+
+                        <img src="~/Content/Images/LargeCommunityRides.jpg" class="img-rounded" style="width: 750px ; height: 400px;" />
+                    </div>
+
+                    <strong>
+                        The Saint Paul Classic is a showcase for the handsome parkways of Saint Paul.  On September 8, 2019, VCM will ride the Classic for the third year.  This is by far one of the best full supported rides offered throughout each season.  Please join us!
+                    </strong>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts{
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
